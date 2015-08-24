@@ -1,0 +1,73 @@
+<!--
+@license
+Copyright (c) 2015 by Maurizio Mangione
+
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-image/iron-image.html">
+<link rel="import" href="pnglib-import.html">
+<link rel="import" href="identicon-import.html">
+
+<!--
+GitHub-style identicon avatar.
+
+Example:
+
+    <identicon-avatar></identicon-avatar>
+
+@element identicon-avatar
+@demo
+-->
+<dom-module id="identicon-avatar">
+
+  <style>
+    :host {
+      display: block;
+      box-sizing: border-box;
+    }
+  </style>
+
+  <template>
+    <iron-image id="identicon" style="width:420px; height:420px;" src="[[encodedPng]]" preload fade></iron-image>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'identicon-avatar',
+
+    properties: {
+      /**
+       * @property hash
+       * @type String
+       */
+      hash: {
+        type: String,
+        value: 'granze'
+      }
+    },
+
+    /**
+     * @property encodedPng
+     * @type String
+     * @private
+     */
+    encodedPng: null,
+
+    attached: function() {
+      var data = new Identicon(this.hash, 420).toString();
+      this.encodedPng = 'data:image/png;base64,' + data;
+    }
+
+  });
+
+</script>

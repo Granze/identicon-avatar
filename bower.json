@@ -1,0 +1,31 @@
+{
+  "name": "identicon-avatar",
+  "version": "0.1.0",
+  "authors": [
+    "Maurizio Mangione <granzebru@gmail.com>"
+  ],
+  "description": "GitHub-style identicon avatar",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "identicon",
+    "avatar",
+    "github"
+  ],
+  "main": "identicon-avatar.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/granze/identicon-avatar/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "identicon.js": "identicon#*",
+    "iron-image": "PolymerElements/iron-image#~1.0.2",
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
