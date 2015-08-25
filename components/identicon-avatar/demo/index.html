@@ -1,0 +1,48 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 by Maurizio Mangione
+
+Adapted from PolymerElements/seed-element:
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>identicon-avatar Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../identicon-avatar.html">
+    <style>
+      .wrapper {
+        width: 960px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .wrapper code {
+        display: inline-block;
+        margin: 10px;
+        padding: 6px;
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body unresolved>
+
+    <div class="wrapper">
+      <code>&lt;identicon-avatar <strong>seed=&quot;granze&quot;</strong>&gt;&lt;/identicon-avatar&gt;</code>
+      <identicon-avatar seed="granze"></identicon-avatar>
+      <code>&lt;identicon-avatar <strong>seed=&quot;polymer&quot; color=&quot;#6F2B36&quot;</strong>&gt;&lt;/identicon-avatar&gt;</code>
+      <identicon-avatar seed="polymer" color="#6F2B36"></identicon-avatar>
+      <code>&lt;identicon-avatar <strong>seed=&quot;webcomponents&quot;
+        bg-color=&quot;#333&quot;</strong>&gt;&lt;/identicon-avatar&gt;</code>
+      <identicon-avatar seed="webcomponents" bg-color="#333"></identicon-avatar>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "identicon-avatar",
+  "version": "0.1.0",
+  "authors": [
+    "Maurizio Mangione <granzebru@gmail.com>"
+  ],
+  "description": "GitHub style identicon avatar using [Blockies](https://github.com/download13/blockies).",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "identicon",
+    "avatar",
+    "github"
+  ],
+  "main": "identicon-avatar.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/granze/identicon-avatar/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "blockies": "~0.1.1",
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
