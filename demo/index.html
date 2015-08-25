@@ -17,10 +17,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <title>identicon-avatar Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../identicon-avatar.html">
+    <style>
+      .wrapper {
+        width: 960px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .wrapper code {
+        display: inline-block;
+        margin: 10px;
+        padding: 6px;
+        background-color: #ddd;
+      }
+    </style>
   </head>
   <body unresolved>
 
-    <identicon-avatar hash="granze"></identicon-avatar>
+    <div class="wrapper">
+      <code>&lt;identicon-avatar <strong>seed=&quot;granze&quot;</strong>&gt;&lt;/identicon-avatar&gt;</code>
+      <identicon-avatar seed="granze"></identicon-avatar>
+      <code>&lt;identicon-avatar <strong>seed=&quot;polymer&quot; color=&quot;#6F2B36&quot;</strong>&gt;&lt;/identicon-avatar&gt;</code>
+      <identicon-avatar seed="polymer" color="#6F2B36"></identicon-avatar>
+      <code>&lt;identicon-avatar <strong>seed=&quot;webcomponents&quot;
+        bg-color=&quot;#333&quot;</strong>&gt;&lt;/identicon-avatar&gt;</code>
+      <identicon-avatar seed="webcomponents" bg-color="#333"></identicon-avatar>
+    </div>
 
   </body>
 </html>
