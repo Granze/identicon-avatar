@@ -10,16 +10,16 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-image/iron-image.html">
-<link rel="import" href="pnglib-import.html">
-<link rel="import" href="identicon-import.html">
+<link rel="import" href="blockies-import.html">
 
 <!--
-GitHub-style identicon avatar.
+GitHub style identicon avatar using [Blockies](https://github.com/download13/blockies).
 
 Example:
 
-    <identicon-avatar></identicon-avatar>
+    <identicon-avatar seed="granze"></identicon-avatar>
+    <identicon-avatar seed="polymer" color="#6F2B36"></identicon-avatar>
+    <identicon-avatar seed="webcomponents" bg-color="#333"></identicon-avatar>
 
 @element identicon-avatar
 @demo
@@ -33,9 +33,7 @@ Example:
     }
   </style>
 
-  <template>
-    <iron-image id="identicon" style="width:420px; height:420px;" src="[[encodedPng]]" preload fade></iron-image>
-  </template>
+  <template></template>
 
 </dom-module>
 
@@ -46,26 +44,37 @@ Example:
     is: 'identicon-avatar',
 
     properties: {
-      /**
-       * @property hash
-       * @type String
-       */
-      hash: {
+      seed: {
         type: String,
-        value: 'granze'
+        value: 'test'
+      },
+      color: {
+        type: String,
+        value: '#88df88'
+      },
+      bgColor: {
+        type: String,
+        value: '#eee'
+      },
+      size: {
+        type: Number,
+        value: 5
+      },
+      scale: {
+        type: Number,
+        value: 50
       }
     },
 
-    /**
-     * @property encodedPng
-     * @type String
-     * @private
-     */
-    encodedPng: null,
-
-    attached: function() {
-      var data = new Identicon(this.hash, 420).toString();
-      this.encodedPng = 'data:image/png;base64,' + data;
+    ready: function() {
+      var avatar = blockies.create({
+        seed: this.seed,
+        color: this.color,
+        bgcolor: this.bgColor,
+        size: this.size,
+        scale: this.scale
+      });
+      Polymer.dom(this.root).appendChild(avatar)
     }
 
   });

@@ -4,7 +4,7 @@
   "authors": [
     "Maurizio Mangione <granzebru@gmail.com>"
   ],
-  "description": "GitHub-style identicon avatar",
+  "description": "GitHub style identicon avatar using [Blockies](https://github.com/download13/blockies).",
   "keywords": [
     "web-component",
     "polymer",
@@ -20,8 +20,7 @@
     "/test/"
   ],
   "dependencies": {
-    "identicon.js": "identicon#*",
-    "iron-image": "PolymerElements/iron-image#~1.0.2",
+    "blockies": "~0.1.1",
     "polymer": "Polymer/polymer#^1.1.0"
   },
   "devDependencies": {
