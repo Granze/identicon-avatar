@@ -7,6 +7,7 @@
   "description": "GitHub style identicon avatar using [Blockies](https://github.com/download13/blockies).",
   "keywords": [
     "web-component",
+    "web-components",
     "polymer",
     "identicon",
     "avatar",
