@@ -1,6 +1,6 @@
 {
   "name": "identicon-avatar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     "Maurizio Mangione <granzebru@gmail.com>"
   ],
@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "blockies": "~0.1.1",
-    "polymer": "Polymer/polymer#^1.1.0"
+    "polymer": "Polymer/polymer#^1.2.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
