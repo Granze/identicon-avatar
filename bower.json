@@ -1,6 +1,6 @@
 {
   "name": "identicon-avatar",
-  "version": "0.1.1",
+  "version": "2.0.0",
   "authors": [
     "Maurizio Mangione <granzebru@gmail.com>"
   ],
@@ -13,19 +13,18 @@
     "avatar",
     "github"
   ],
-  "main": "identicon-avatar.html",
-  "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/granze/identicon-avatar/",
-  "ignore": [
-    "/.*",
-    "/test/"
-  ],
+  "main": "identicon-avatar.html",
   "dependencies": {
-    "blockies": "~0.1.1",
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "blockies": "^0.1.1"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "*"
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
   }
 }
